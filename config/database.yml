@@ -55,3 +55,4 @@ production:
   url:      <%= ENV["DATABASE_URL"] %>
   username: <%= ENV["DATABASE_USERNAME"] %>
   password: <%= ENV["BOOK_TRACKER_DATABASE_PASSWORD"] %>
+  port:     <%= ENV["DATABASE_PORT"] %>
