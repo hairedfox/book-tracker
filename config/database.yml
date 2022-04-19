@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  encoding: unicode
+  encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
@@ -51,7 +51,7 @@ test:
 production:
   <<: *default
   adapter:  postgresql
-  encoding: unicode
+  encoding: utf8
   database: book_tracker_production
   url:      <%= ENV["DATABASE_URL"] %>
   username: <%= ENV["DATABASE_USERNAME"] %>
