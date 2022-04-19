@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
+  adapter:  postgresql
   database: book_tracker_production
+  url:      <%= ENV["DATABASE_URL"] %>
   username: book_tracker
   password: <%= ENV["BOOK_TRACKER_DATABASE_PASSWORD"] %>
